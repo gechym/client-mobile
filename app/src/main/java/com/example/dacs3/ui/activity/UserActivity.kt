@@ -60,7 +60,7 @@ class UserActivity : AppCompatActivity() {
 
 
 
-        //kiểm tra đăng nhập
+        //kiểm tra đăng nhập 123
         if (user != null) {
             Toast.makeText(this, "Bạn đã đăng nhập", Toast.LENGTH_SHORT).show()
 //            setFragment(InfoUserFragment())
