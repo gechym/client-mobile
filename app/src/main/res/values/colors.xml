@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="redPrimary">#E50914</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="black_500">#525453</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#620OEE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="colorSuccess">#4BB543</color>
+    <color name="colorwarning">#FFCC00</color>
+    <color name="colorNeutral">#434343</color>
+    <color name="colorError">#CC8000</color>
+    <color name="colorTextPrimary">#212121</color>
+
+    <color name="redNetflix">#FF0000</color>
+    <color name="textColor2">#737373</color>
+    <color name="navBackgroud">#121212</color>
+
+</resources>

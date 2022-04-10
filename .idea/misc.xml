@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable-v24/mang_hinh_cho.xml" value="0.231" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/animation_loading.xml" value="0.1185" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.1965" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/btn_error_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/btn_neutral_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/btn_sucess_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/btn_warning_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/custom_input.xml" value="0.2145" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/dialog_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/error_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/gradient_background.xml" value="0.203" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/gradient_nav_bar.xml" value="0.1095" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_back_24.xml" value="0.168" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.2285" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_audiotrack_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_brightness_medium_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_horizontal_rule_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_pause_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_picture_in_picture_alt_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_repeat_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_skip_next_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_skip_previous_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_speaker_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_speed_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_subtitles_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_timer_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_baseline_volume_up_24.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_down.xml" value="0.1965" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_home.xml" value="0.1965" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_notes.xml" value="0.1965" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/ic_search.xml" value="0.1965" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/item_episode.xml" value="0.13" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/mang_hinh_cho.xml" value="0.231" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/mang_hinh_loading.xml" value="0.231" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/network_security_config.xml" value="0.1095" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/seekbar_progress.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/seekbar_progress_style.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/seekbar_thumb.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/seekbar_track.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/selected_dot.xml" value="0.1695" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/success_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/drawable/warning_background.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/activity_detail.xml" value="0.152" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/activity_hls.xml" value="0.20208333333333334" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/activity_hls2.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/activity_login.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/activity_search_fragment.xml" value="0.2" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/activity_user.xml" value="0.19583333333333333" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/booster.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.5138539042821159" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/custom_control_view.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/drowdown_item.xml" value="0.2" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_download.xml" value="0.2" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_episode.xml" value="0.21770833333333334" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_info_user.xml" value="0.19583333333333333" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_options.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_recomment.xml" value="0.21770833333333334" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_register.xml" value="0.19583333333333333" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_trailer.xml" value="0.21770833333333334" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_youtube.xml" value="0.16354166666666667" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/item_category.xml" value="0.20052083333333334" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/item_category_select_box.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/item_episode.xml" value="0.72" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/item_film.xml" value="0.4" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/item_loading.xml" value="0.19583333333333333" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/item_select_box.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/item_slider.xml" value="0.264" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/layort_loading_dialog.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/layout_error_dialog.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/layout_waring_dialog.xml" value="0.2" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/mang_hinh_loading.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/more_features.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/speed_dialog.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/menu-v26/bottom_menu.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/menu/bottom_menu.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/menu/bottom_nav.xml" value="0.2203125" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1215" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2075" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2203125" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

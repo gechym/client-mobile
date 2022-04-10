@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">HDfilm</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="download">Download</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="options">Options</string>
+
+
+    <string name="newMovie">phim sắp ra</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="homeFragment">TRANG CHỦ</string>
+    <string name="newMovieFragment">PHIM MỚI RA</string>
+    <string name="downloadFragment">BỘ SƯ TẬP TẢI VỀ</string>
+    <string name="open">0pen</string>
+    <string name="close">Close</string>
+    <string name="feedback">Feedback</string>
+    <string name="themes">Themes</string>
+    <string name="sort_order">Sort Order</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+
+
+    <string name="video_name">Video Name</string>
+    <string name="folder_name">Folder Name</string>
+    <string name="duration">00:00</string>
+    <string name="semi_colon">:</string>
+
+    <string name="lock">Lock Icon</string>
+    <string name="back_btn">Back Button</string>
+    <string name="menu">Menu</string>
+
+    <string name="image">Image</string>
+    <string name="loading">Loading</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="audio_track">Audio Track</string>
+    <string name="subtitles">Subtitles</string>
+    <string name="booster">Booster</string>
+    <string name="speed">Speed</string>
+    <string name="sleep_timer">Sleep Timer</string>
+    <string name="pip_mode">PIP Mode</string>
+    <string name="accounts">accounts</string>
+    <string name="b_n_mu_n_xem_g">Bạn muốn xem gì ?</string>
+</resources>

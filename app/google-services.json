@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "397884200789",
+    "firebase_url": "https://hdfilm-1662002-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hdfilm-1662002",
+    "storage_bucket": "hdfilm-1662002.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397884200789:android:4006c57b25d44c9c0f41dc",
+        "android_client_info": {
+          "package_name": "com.example.dacs3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397884200789-fo9u71u6g06sugdal4cuj5fvvtj120fg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dacs3",
+            "certificate_hash": "64fb25d1dd55d2f0a7dbdf41c0f03f5f7d6170fd"
+          }
+        },
+        {
+          "client_id": "397884200789-9sv1nsqbrf0ik3c8kbcreau1en4c24mf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh-cWcip4NIARjld1c9ojT5HcwrAXKBM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397884200789-9sv1nsqbrf0ik3c8kbcreau1en4c24mf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

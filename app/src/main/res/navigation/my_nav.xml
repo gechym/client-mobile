@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dacs3.ui.Fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragmentActivity"
+            app:destination="@id/searchFragmentActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_downloadFragment"
+            app:destination="@id/downloadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.example.dacs3.ui.Fragment.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" >
+        <action
+            android:id="@+id/action_downloadFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.example.dacs3.ui.Fragment.OptionsFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" >
+    </fragment>
+    <activity
+        android:id="@+id/searchFragmentActivity"
+        android:name="com.example.dacs3.ui.Fragment.SearchFragmentActivity"
+        android:label="activity_search_fragment"
+        tools:layout="@layout/activity_search_fragment" />
+</navigation>

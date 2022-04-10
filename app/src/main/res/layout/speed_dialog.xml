@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minusBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        app:iconGravity="end"
+        android:backgroundTint="@android:color/transparent"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:iconTint="@color/white"
+        app:shapeAppearance="@style/curved"
+        app:tint="@color/white"
+        app:icon="@drawable/ic_baseline_horizontal_rule_24"/>
+
+
+    <TextView
+        android:id="@+id/tvSpeed"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:text="@string/speed"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+    />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/transparent"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        app:iconGravity="start"
+        android:focusable="true"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:iconTint="@color/white"
+        app:shapeAppearance="@style/curved"
+        app:tint="@color/white"
+        app:icon="@drawable/ic_baseline_add_24"/>
+
+</LinearLayout>

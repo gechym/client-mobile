@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.HlsActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.github.vkay94.dtpv.DoubleTapPlayerView
+            android:id="@+id/exoPlayerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:keepScreenOn="true"
+            app:controller_layout_id="@layout/custom_control_view"
+            app:dtpv_controller="@+id/youtube_overlay"
+            app:show_buffering="always" >
+
+            <com.github.vkay94.dtpv.youtube.YouTubeOverlay
+                android:id="@+id/youtube_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#77000000"
+                android:keepScreenOn="true"
+                android:visibility="invisible"
+                app:yt_playerView="@+id/exoPlayerView" />
+        </com.github.vkay94.dtpv.DoubleTapPlayerView>
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/topController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#42000000">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/white" />
+        <TextView
+            android:id="@+id/videoTitle"
+            android:text="Tên Video"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/moreFeaturesBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="50dp"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/white" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_baseline_lock_open_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+
+    <Button
+        android:id="@+id/volumeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/dialog_background"
+        android:drawableLeft="@drawable/ic_baseline_volume_up_24"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="visible"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/redPrimary"
+        android:theme="@style/Theme.Player"
+        />
+
+    <Button
+        android:id="@+id/brightnessIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/dialog_background"
+        android:drawableRight="@drawable/ic_baseline_brightness_medium_24"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#42000000"
+        android:gravity="start|bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageButton
+            android:layout_marginLeft="50dp"
+            android:id="@+id/playPauseBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?android:selectableItemBackground"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_pause_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/curved"
+            app:tint="@color/white" />
+
+
+        <ImageButton
+            android:id="@+id/prevBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_skip_previous_24"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/nextBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_skip_next_24"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/repeatBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_repeat_24"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:max="15"
+            android:maxHeight="5dp"
+            android:min="0"
+            android:progress="25"
+            android:progressDrawable="@drawable/seekbar_progress_style"
+            android:thumb="@drawable/seekbar_thumb"
+            android:thumbOffset="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
