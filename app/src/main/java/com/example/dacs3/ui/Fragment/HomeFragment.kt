@@ -217,7 +217,7 @@ class HomeFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
             }
 
         }else{
-            binding.avtUser.setImageResource(R.drawable.avt)
+            binding.avtUser.setImageResource(R.drawable.ic_baseline_login_24)
 
             val scopeMain = CoroutineScope(Dispatchers.Main)
             scopeMain.launch {
