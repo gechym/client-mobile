@@ -8,5 +8,4 @@ data class MyListMovie(
     val id : Int? = null,
     val category: Int? = null,
     val image: String? = null
-
 )

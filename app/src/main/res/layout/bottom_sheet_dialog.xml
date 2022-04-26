@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -114,7 +115,7 @@
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:text="Tải xuống"
+            android:text="Download"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:icon="@drawable/ic_down"
@@ -131,7 +132,7 @@
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:text="Danh sách"
+            android:text="My list"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:icon="@drawable/ic_add_24"
@@ -147,7 +148,7 @@
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:text="Chia sẻ"
+            android:text="Share"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:icon="@drawable/ic_share_24"
@@ -155,6 +156,11 @@
             app:iconTint="@color/white"
             app:tint="@color/white" />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -178,7 +184,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Chi tiết và nội dung khác"
+            android:text="Details and other content"
             android:textColor="@color/white" />
 
         <com.google.android.material.button.MaterialButton
