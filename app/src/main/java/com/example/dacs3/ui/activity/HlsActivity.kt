@@ -62,7 +62,7 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
     lateinit var urlType: URLType
 
     lateinit var urlMedia : String
-
+    lateinit var subUrl : String
 
 
     companion object{
@@ -129,6 +129,7 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
 
 
         urlMedia = intent.getStringExtra("urlMedia").toString()
+        subUrl = intent.getStringExtra("subUrl").toString()
 
 
 
@@ -473,7 +474,7 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
                     MediaItem.fromUri(Uri.parse(urlMedia))
                 )
 
-                val assetSrtUri = Uri.parse(("https://subtitles.netpop.app/subtitles/20220314/1647223371008_Spider-Man-No-Way-Home-2022-720p-BluRay-900MB-x264-GalaxyRG-srt"))
+                val assetSrtUri = Uri.parse(subUrl)
                 val assetVideoUri = Uri.parse((urlMedia))
 
                 val subtitle = MediaItem.SubtitleConfiguration.Builder(assetSrtUri)

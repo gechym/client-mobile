@@ -40,6 +40,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import kotlin.properties.Delegates
 
 
+@Suppress("DEPRECATION")
 class DetailActivity : YouTubeBaseActivity() {
 
     lateinit var binding: ActivityDetailBinding
@@ -141,13 +142,11 @@ class DetailActivity : YouTubeBaseActivity() {
         try {
             gson = GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()
 
-
             proviceRetrofit = Retrofit.Builder()
                 .baseUrl(HOST_LINK)
                 .addConverterFactory(GsonConverterFactory.create(gson))
 
             proviceMovieService = proviceRetrofit.build().create(ApiRetrofit::class.java)
-
 
             val res = proviceMovieService.getDetailMovie(id, category)
 
@@ -180,6 +179,11 @@ class DetailActivity : YouTubeBaseActivity() {
             }
 
 
+
+
+
+
+
             Glide.with(this)
                 .load(data.image.mainImage)
                 .placeholder(R.drawable.animation_loading)
@@ -201,7 +205,7 @@ class DetailActivity : YouTubeBaseActivity() {
                     .inflate(R.layout.layort_loading_dialog, null, false)
                 val dialog = MaterialAlertDialogBuilder(this).setView(successDialog)
                     .setBackground(
-                        ColorDrawable(0x00000000.toInt())
+                        ColorDrawable(0x00000000)
                     ).create()
 
                 binding.play.setOnClickListener {
@@ -216,12 +220,18 @@ class DetailActivity : YouTubeBaseActivity() {
                                 definition = data.episodeDetails[0].resolution[0].code
                             ).body()?.data?.mediaUrl
 
+                            val sub = data.episodeDetails[0].subtitles.filter {
+                                Log.e("CheckLog", it.toString())
+                                it.language == "Tiếng Việt"
+                            }
+
                             Log.e(
                                 "CheckLog", urlMedia.toString()
                             )
                             dialog.dismiss()
                             val intent = Intent(this@DetailActivity, HlsActivity::class.java)
                             intent.putExtra("urlMedia", urlMedia)
+                            intent.putExtra("subUrl",sub[0].subtitlingUrl)
                             ContextCompat.startActivity(this@DetailActivity, intent, null)
                         } catch (e: Exception) {
 
