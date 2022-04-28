@@ -63,20 +63,9 @@ class UserActivity : AppCompatActivity() {
         //kiểm tra đăng nhập
         if (user != null) {
             Toast.makeText(this, "Bạn đã đăng nhập", Toast.LENGTH_SHORT).show()
-//            setFragment(InfoUserFragment())
-//
-//            fin
-
             navController.navigate(R.id.infoUserFragment)
-
-
-
-
         }else{
-//            setFragment(LoginFragment())
-
             navController.navigate(R.id.loginFragment)
-
         }
 
         binding.back.setOnClickListener {

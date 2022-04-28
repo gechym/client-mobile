@@ -118,7 +118,6 @@
                 android:id="@+id/avtUser"
                 android:src="@drawable/avt"
                 android:layout_width="40dp"
-                android:scaleType="centerCrop"
                 android:layout_height="40dp"/>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

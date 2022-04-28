@@ -120,19 +120,24 @@ class SearchFragmentActivity : AppCompatActivity() {
 
         val scopeMain = CoroutineScope(Dispatchers.Main)
         scopeMain.launch {
-            val listSearch = mainRepository.getSearchMovie(
-                SearchPost(
-                    params = getParams(binding.typeFilm.text.split("-")),
-                    category = getParams(binding.category.text.split("-")),
-                    area = getParams(binding.area.text.split("-")),
-                    year = getParams(binding.year.text.split("-")),
-                    order = getParams(binding.status.text.split("-"))
+            try{
+                val listSearch = mainRepository.getSearchMovie(
+                    SearchPost(
+                        params = getParams(binding.typeFilm.text.split("-")),
+                        category = getParams(binding.category.text.split("-")),
+                        area = getParams(binding.area.text.split("-")),
+                        year = getParams(binding.year.text.split("-")),
+                        order = getParams(binding.status.text.split("-"))
+                    )
                 )
-            )
 
-            binding.recyclerviewSearchList.setHasFixedSize(true)
-            binding.recyclerviewSearchList.layoutManager = GridLayoutManager(applicationContext, 3)
-            binding.recyclerviewSearchList.adapter = FlilmAdapter(listSearch,false,this@SearchFragmentActivity)
+                binding.recyclerviewSearchList.setHasFixedSize(true)
+                binding.recyclerviewSearchList.layoutManager = GridLayoutManager(applicationContext, 3)
+                binding.recyclerviewSearchList.adapter = FlilmAdapter(listSearch,false,this@SearchFragmentActivity)
+            }catch (e:Exception){
+
+            }
+
         }
 
 

@@ -14,7 +14,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.dacs3.R
 import com.example.dacs3.data.retrofit.module.getDetail.RecommendMovies
 import com.example.dacs3.databinding.BottomSheetDialogBinding
-import com.example.dacs3.databinding.ItemEpisodeBinding
 import com.example.dacs3.databinding.ItemFilmBinding
 import com.example.dacs3.ui.activity.DetailActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog

@@ -101,11 +101,9 @@ class DetailActivity : YouTubeBaseActivity() {
 //        binding.tableLayout.setupWithViewPager(binding.viewPager)
 //        binding.tableLayout.tag = 1
 
-        if (key == "0"){
+        if (key == "0") {
             binding.trailerYTB.visibility = View.GONE
-
-
-        }else{
+        } else {
             binding.trailerYTB.visibility = View.VISIBLE
 
             youTubePlayer = binding.trailerYTB
@@ -197,10 +195,10 @@ class DetailActivity : YouTubeBaseActivity() {
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .priority(Priority.HIGH)
                 .into(binding.banner)
-            
-            if(data.episodeDetails.size == 1) { // Phim điện ảnh
+
+            if (data.episodeDetails.size == 1) { // Phim điện ảnh
                 val successDialog = LayoutInflater.from(this)
-                    .inflate(R.layout.layort_loading_dialog,null , false)
+                    .inflate(R.layout.layort_loading_dialog, null, false)
                 val dialog = MaterialAlertDialogBuilder(this).setView(successDialog)
                     .setBackground(
                         ColorDrawable(0x00000000.toInt())
@@ -225,24 +223,28 @@ class DetailActivity : YouTubeBaseActivity() {
                             val intent = Intent(this@DetailActivity, HlsActivity::class.java)
                             intent.putExtra("urlMedia", urlMedia)
                             ContextCompat.startActivity(this@DetailActivity, intent, null)
-                        }catch (e : Exception) {
+                        } catch (e: Exception) {
 
                             dialog.dismiss()
-                            Toast.makeText(this@DetailActivity, "Lỗi Loading film $e", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@DetailActivity,
+                                "Film đang được vui lòng gửi thử lại...",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
 
                     }
                 }
 
-            }else{
+            } else {
                 binding.recyclerviewEpisode.setHasFixedSize(true)
                 binding.recyclerviewEpisode.layoutManager = GridLayoutManager(this, 4)
                 binding.recyclerviewEpisode.adapter =
                     EpisodeAdapter(data.episodeDetails, id, category, this)
             }
-            
 
-            
+
+
 
 
 

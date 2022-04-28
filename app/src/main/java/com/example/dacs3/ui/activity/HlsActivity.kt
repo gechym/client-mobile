@@ -40,8 +40,10 @@ import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.ui.TimeBar
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
+import com.google.android.exoplayer2.util.MimeTypes
 import com.google.android.exoplayer2.util.Util
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.common.collect.ImmutableList
 import java.text.DecimalFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -98,6 +100,9 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
 
         // audio manager
         private lateinit var audioManager : AudioManager
+
+        // isloke
+        private var isLocked : Boolean = false
 
     }
 
@@ -172,10 +177,9 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
 
         //TODO tạo nguồn truyền thông
         createMediaSource()
-        simpleExoPlayer.setMediaSource(mediaSource)
 
-
-        simpleExoPlayer.prepare()
+//        simpleExoPlayer.setMediaSource(mediaSource)
+//        simpleExoPlayer.prepare()
 
 
         //TODO BUTTER AUDIO
@@ -241,6 +245,20 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
                 repeat = true
                 simpleExoPlayer.repeatMode = Player.REPEAT_MODE_ONE
                 binding.repeatBtn.setImageResource(com.google.android.exoplayer2.R.drawable.exo_controls_repeat_all)
+            }
+        }
+
+        binding.lockIcon.setOnClickListener {
+            if (!isLocked){
+                isLocked = true
+                binding.exoPlayerView.useController = false
+                binding.exoPlayerView.hideController()
+                binding.lockIcon.setImageResource(R.drawable.ic_baseline_lock_24)
+            }else{
+                isLocked = false
+                binding.exoPlayerView.useController = true
+                binding.exoPlayerView.showController()
+                binding.lockIcon.setImageResource(R.drawable.ic_baseline_lock_open_24)
             }
         }
 
@@ -442,6 +460,9 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
                 )
             }
 
+
+
+
             URLType.HLS -> {
 
                 val dataSourceFactory : DataSource.Factory = DefaultDataSourceFactory(
@@ -451,6 +472,25 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
                 mediaSource = HlsMediaSource.Factory(dataSourceFactory).createMediaSource(
                     MediaItem.fromUri(Uri.parse(urlMedia))
                 )
+
+                val assetSrtUri = Uri.parse(("https://subtitles.netpop.app/subtitles/20220314/1647223371008_Spider-Man-No-Way-Home-2022-720p-BluRay-900MB-x264-GalaxyRG-srt"))
+                val assetVideoUri = Uri.parse((urlMedia))
+
+                val subtitle = MediaItem.SubtitleConfiguration.Builder(assetSrtUri)
+                    .setMimeType(MimeTypes.APPLICATION_SUBRIP)
+                    .setSelectionFlags(C.SELECTION_FLAG_DEFAULT)
+                    .build()
+
+                val mediaItem = MediaItem.Builder()
+                    .setUri(assetVideoUri)
+                    .setSubtitleConfigurations(ImmutableList.of(subtitle))
+                    .build()
+
+
+                simpleExoPlayer.setMediaItem(mediaItem)
+                simpleExoPlayer.prepare()
+                simpleExoPlayer.play()
+
             }
         }
     }
@@ -528,6 +568,11 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
         binding.topController.visibility = visibility
         binding.bottomController.visibility = visibility
         binding.playPauseBtn.visibility = visibility
+        if (isLocked){
+            binding.lockIcon.visibility = View.VISIBLE
+        }else{
+            binding.lockIcon.visibility = visibility
+        }
 
 
     }

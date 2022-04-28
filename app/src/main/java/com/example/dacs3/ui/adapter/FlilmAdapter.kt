@@ -34,8 +34,6 @@ class FlilmAdapter(
     lateinit var bottomSheetDialog: BottomSheetDialog
     lateinit var mAuth: FirebaseAuth
 
-
-
     inner class viewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val img: ImageView = view.findViewById(R.id.img)
     }
@@ -65,7 +63,7 @@ class FlilmAdapter(
         }
     }
 
-    @SuppressLint("InflateParams")
+    @SuppressLint("InflateParams", "SetTextI18n")
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val film = list[position]
         val user = mAuth.currentUser
@@ -93,8 +91,6 @@ class FlilmAdapter(
 
                 bindingBottomSheetDialog.apply {
                     this.btnPlay.setOnClickListener {
-
-
                         bottomSheetDialog.dismiss()
 
 
@@ -174,7 +170,7 @@ class FlilmAdapter(
                         .into(this.image)
 
                     this.title.text = film.name
-                    this.description.text = film.description
+                    this.description.text = "Each day, Rin awakens in virtual reality and uses a tablet which controls the simulation to create a new, different, beautiful world for herself. Until one day, everything changes, and Rin comes to learn the true origins behind her life inside a simulation."
                 }
 
 
