@@ -8,25 +8,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.denzcoskun.imageslider.constants.ScaleTypes
-import com.denzcoskun.imageslider.interfaces.ItemClickListener
-import com.denzcoskun.imageslider.models.SlideModel
 import com.example.dacs3.R
 import com.example.dacs3.Repository.MainRepository
-import com.example.dacs3.databinding.BottomSheetDialogBinding
 import com.example.dacs3.databinding.FragmentHomeBinding
 import com.example.dacs3.databinding.LayoutErrorDialogBinding
 import com.example.dacs3.module.CategoryFilm
-import com.example.dacs3.ui.activity.DetailActivity
 import com.example.dacs3.ui.activity.UserActivity
 import com.example.dacs3.ui.adapter.CategoryAdapter
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
@@ -111,13 +104,13 @@ class HomeFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
 
             adapter.addListMore(fetchData(2))
             adapter.addListMore(fetchData(3))
-            adapter.addListMore(fetchData(4))
-            adapter.addListMore(fetchData(5))
-            adapter.addListMore(fetchData(6))
-            adapter.addListMore(fetchData(7))
-            adapter.addListMore(fetchData(8))
-            adapter.addListMore(fetchData(9))
-            adapter.addListMore(fetchData(10))
+//            adapter.addListMore(fetchData(4))
+//            adapter.addListMore(fetchData(5))
+//            adapter.addListMore(fetchData(6))
+//            adapter.addListMore(fetchData(7))
+//            adapter.addListMore(fetchData(8))
+//            adapter.addListMore(fetchData(9))
+//            adapter.addListMore(fetchData(10))
 
 //            // render data slider
 //            val imageList = ArrayList<SlideModel>() // Create image list
