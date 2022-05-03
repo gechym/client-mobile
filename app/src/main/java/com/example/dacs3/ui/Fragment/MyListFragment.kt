@@ -24,6 +24,7 @@ class MyListFragment : Fragment() {
 
     lateinit var binding: FragmentMyListBinding
     lateinit var mAuth: FirebaseAuth
+    lateinit var adapter: FlilmAdapter
 
 
     override fun onCreateView(
@@ -50,38 +51,48 @@ class MyListFragment : Fragment() {
 
                 binding.text.text = nameRef
 
+                binding.recyclerviewMylist.setHasFixedSize(true)
+                binding.recyclerviewMylist.layoutManager = GridLayoutManager(requireContext(), 3)
+                adapter = FlilmAdapter(listOf(),false,requireContext())
+                binding.recyclerviewMylist.adapter = adapter
 
 
                 myRef.addValueEventListener(object  : ValueEventListener{
+
                     var listFilmAdapter: MutableList<Film> = mutableListOf()
+
                     override fun onDataChange(snapshot: DataSnapshot) {
                         listFilmAdapter = mutableListOf()
                         for (userSnapshot in snapshot.children) {
                             val myListMovie = userSnapshot.getValue(MyListMovie::class.java)
-                            if (myListMovie != null){
-                                listFilmAdapter.add(
-                                    Film(
-                                        id= myListMovie.id!!,
-                                        image = 0,
-                                        imageUrl = myListMovie.image!!,
-                                        banner = "",
-                                        category = myListMovie.category!!,
-                                        description = "",
-                                        epvisodeTotal = 0,
-                                        name = "",
-                                        yearRelease = 2
-                                    )
+
+                            Log.e("CheckLog",myListMovie.toString())
+
+                            listFilmAdapter.add(
+                                Film(
+                                    id= myListMovie?.id!!,
+                                    image = 0,
+                                    imageUrl = myListMovie.image!!,
+                                    banner = "",
+                                    category = myListMovie.category!!,
+                                    description = "",
+                                    epvisodeTotal = 0,
+                                    name = "",
+                                    yearRelease = 2
                                 )
-                            }
+                            )
+
+                            adapter.updateData(listFilmAdapter)
+
 
                         }
 
                         Log.e("CheckLog",listFilmAdapter.toString())
 
-                        binding.recyclerviewMylist.setHasFixedSize(true)
-                        binding.recyclerviewMylist.layoutManager = GridLayoutManager(requireContext(), 3)
-                        binding.recyclerviewMylist.adapter = FlilmAdapter(listFilmAdapter,false,requireContext())
+
+
                     }
+
 
 
 

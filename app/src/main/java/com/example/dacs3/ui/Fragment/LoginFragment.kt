@@ -148,39 +148,25 @@ class LoginFragment : Fragment() {
                         .show()
 
 
-                    val currentUser = task.result.user
-                    if (currentUser != null) {
-                        try {
-                            val nameRef = currentUser.email?.split("@")?.get(0)
-
-                            val database = Firebase.database
-                            val myRef = database.getReference(nameRef.toString())
-
-                            myRef.setValue(
-                                User(
-                                    email = currentUser.email,
-                                    isMenbership = false,
-                                    myListMovie = MyListMovie(),
-                                    avata = currentUser.photoUrl.toString()
-                                )
-                            )
-                        }catch (e : Exception){
-                            val nameRef = currentUser.email?.split(".")?.get(0)
-
-                            val database = Firebase.database
-                            val myRef = database.getReference(nameRef.toString())
-
-                            myRef.setValue(
-                                User(
-                                    email = currentUser.email,
-                                    isMenbership = false,
-                                    myListMovie = MyListMovie(),
-                                    avata = currentUser.photoUrl.toString()
-                                )
-                            )
-                        }
-
-                    }
+//                    val currentUser = task.result.user
+//                    if (currentUser != null) {
+//                        try {
+//                            val nameRef = currentUser.email?.split("@")?.get(0)
+//
+//                            val database = Firebase.database
+//                            val myRef = database.getReference(nameRef.toString())
+//
+//
+//                        }catch (e : Exception){
+//                            val nameRef = currentUser.email?.split(".")?.get(0)
+//
+//                            val database = Firebase.database
+//                            val myRef = database.getReference(nameRef.toString())
+//
+//
+//                        }
+//
+//                    }
 
                     activity?.finish()
                 } else {

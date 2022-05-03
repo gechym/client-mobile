@@ -92,4 +92,6 @@ class RelatedSeriesAdapter(
     override fun getItemCount(): Int {
         return list.size
     }
+
+
 }

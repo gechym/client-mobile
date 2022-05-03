@@ -26,7 +26,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class FlilmAdapter(
-    private val list: List<Film>,
+    private var list: List<Film>,
     private val isMainSlider: Boolean,
     private val contextParent: Context
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -302,6 +302,12 @@ class FlilmAdapter(
                 bottomSheetDialog.show()
             }
         }
+
+    }
+
+    fun updateData(list: List<Film>) {
+        this.list = list
+        notifyDataSetChanged()
 
     }
 
