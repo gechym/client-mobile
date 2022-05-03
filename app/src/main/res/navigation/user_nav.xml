@@ -28,10 +28,18 @@
         android:id="@+id/infoUserFragment"
         android:name="com.example.dacs3.ui.Fragment.InfoUserFragment"
         android:label="fragment_info_user"
-        tools:layout="@layout/fragment_info_user" />
+        tools:layout="@layout/fragment_info_user" >
+        <action
+            android:id="@+id/action_infoUserFragment_to_myListFragment"
+            app:destination="@id/myListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.dacs3.ui.Fragment.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/myListFragment"
+        android:name="com.example.dacs3.ui.Fragment.MyListFragment"
+        android:label="MyListFragment" />
 </navigation>
