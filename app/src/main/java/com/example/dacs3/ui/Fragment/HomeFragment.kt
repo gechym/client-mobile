@@ -28,6 +28,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.lang.Exception
 import javax.inject.Inject
+import kotlin.random.Random
 
 @AndroidEntryPoint
 class HomeFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
@@ -36,6 +37,10 @@ class HomeFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
     lateinit var adapter: CategoryAdapter
     lateinit var swipeRefreshLayout: SwipeRefreshLayout
     lateinit var mAuth: FirebaseAuth
+
+    companion object{
+        var page = 1;
+    }
 
 
     @Inject
@@ -104,13 +109,15 @@ class HomeFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
 
             adapter.addListMore(fetchData(2))
             adapter.addListMore(fetchData(3))
-//            adapter.addListMore(fetchData(4))
-//            adapter.addListMore(fetchData(5))
-//            adapter.addListMore(fetchData(6))
-//            adapter.addListMore(fetchData(7))
-//            adapter.addListMore(fetchData(8))
-//            adapter.addListMore(fetchData(9))
-//            adapter.addListMore(fetchData(10))
+            adapter.addListMore(fetchData(4))
+
+            adapter.addListMore(fetchData(5))
+            adapter.addListMore(fetchData(6))
+            adapter.addListMore(fetchData(7))
+
+            adapter.addListMore(fetchData(8))
+            adapter.addListMore(fetchData(9))
+            adapter.addListMore(fetchData(10))
 
 //            // render data slider
 //            val imageList = ArrayList<SlideModel>() // Create image list
@@ -221,11 +228,14 @@ class HomeFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
     }
 
     override fun onRefresh() {
-        Toast.makeText(requireContext(), "Đang làm mới dữ liệu .....", Toast.LENGTH_SHORT).show()
         val scopeMain = CoroutineScope(Dispatchers.Main)
         scopeMain.launch {
-            renderDataView()
+            adapter.clearData()
+            adapter.addListMore(fetchData(3))
+            adapter.addListMore(fetchData(Random.nextInt(4,7)))
+            adapter.addListMore(fetchData(Random.nextInt(7,11)))
             swipeRefreshLayout.isRefreshing = false
         }
+
     }
 }

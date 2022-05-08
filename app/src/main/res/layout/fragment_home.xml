@@ -9,62 +9,44 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipe"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <ScrollView
+        app:layout_constraintTop_toTopOf="@+id/navBar">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none"
-            >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="100dp">
 
-            <LinearLayout
-                android:layout_marginTop="50dp"
-                android:id="@+id/linearLayout2"
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingHorizontal="10dp">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="6dp">
-
-                    <!--                <com.denzcoskun.imageslider.ImageSlider-->
-                    <!--                    android:id="@+id/imageSlider"-->
-                    <!--                    android:layout_width="match_parent"-->
-                    <!--                    android:layout_height="200dp"-->
-                    <!--                    android:visibility="visible"-->
-                    <!--                    app:iss_auto_cycle="true"-->
-                    <!--                    app:iss_title_background="@drawable/gradient_background"-->
-                    <!--                    app:iss_delay="0"-->
-                    <!--                    app:iss_period="2500"-->
-                    <!--                    app:iss_selected_dot="@drawable/selected_dot"-->
-                    <!--                    app:iss_unselected_dot="@drawable/selected_dot" />-->
-
-                </androidx.cardview.widget.CardView>
-
+                android:layout_height="1000dp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="1000dp"
-                    android:layout_marginBottom="100dp"
                     android:scrollbars="none" />
-            </LinearLayout>
 
-        </ScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 
 

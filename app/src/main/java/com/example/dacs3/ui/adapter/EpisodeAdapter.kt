@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -52,6 +53,7 @@ class EpisodeAdapter(
     inner class viewHolder(binding: ItemEpisodeBinding) : RecyclerView.ViewHolder(binding.root) {
         val btn = binding.button
     }
+
 
 
 

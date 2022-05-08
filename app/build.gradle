@@ -152,5 +152,8 @@ dependencies {
 
     //Toast
     implementation 'io.github.muddz:styleabletoast:2.4.0'
+
+
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
 }
 

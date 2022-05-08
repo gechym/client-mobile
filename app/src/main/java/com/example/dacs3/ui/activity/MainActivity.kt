@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         //TODO Chuyen mang hinh chính
         val scopeMain = CoroutineScope(Dispatchers.Main)
         scopeMain.launch {
-            delay(4000L)
+            delay(2000L)
 
             setContentView(binding.root)
             navController = findNavController(R.id.fragmentContainerView)

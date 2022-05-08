@@ -64,9 +64,10 @@
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/drowdown_item.xml" value="0.2" />
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_download.xml" value="0.2" />
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_episode.xml" value="0.21770833333333334" />
-        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_info_user.xml" value="0.19583333333333333" />
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_my_list.xml" value="0.18568840579710144" />
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_options.xml" value="0.1" />
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_recomment.xml" value="0.21770833333333334" />
         <entry key="..\:/Android/DACS3/app/src/main/res/layout/fragment_register.xml" value="0.19583333333333333" />

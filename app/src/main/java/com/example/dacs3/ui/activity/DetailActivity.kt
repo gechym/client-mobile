@@ -220,25 +220,38 @@ class DetailActivity : YouTubeBaseActivity() {
                                 definition = data.episodeDetails[0].resolution[0].code
                             ).body()?.data?.mediaUrl
 
-                            val sub = data.episodeDetails[0].subtitles.filter {
-                                Log.e("CheckLog", it.toString())
-                                it.language == "Tiếng Việt"
+                            try {
+                                val sub = data.episodeDetails[0].subtitles.filter {
+                                    Log.e("CheckLog", it.toString())
+                                    it.language == "Tiếng Việt"
+                                }
+
+                                Log.e(
+                                    "CheckLog", urlMedia.toString()
+                                )
+                                dialog.dismiss()
+                                val intent = Intent(this@DetailActivity, HlsActivity::class.java)
+                                intent.putExtra("urlMedia", urlMedia)
+                                intent.putExtra("subUrl",sub[0].subtitlingUrl)
+                                ContextCompat.startActivity(this@DetailActivity, intent, null)
+                            }catch (e:Exception){
+                                dialog.dismiss()
+                                val intent = Intent(this@DetailActivity, HlsActivity::class.java)
+                                intent.putExtra("urlMedia", urlMedia)
+                                ContextCompat.startActivity(this@DetailActivity, intent, null)
+
+                                return@launch
                             }
 
-                            Log.e(
-                                "CheckLog", urlMedia.toString()
-                            )
-                            dialog.dismiss()
-                            val intent = Intent(this@DetailActivity, HlsActivity::class.java)
-                            intent.putExtra("urlMedia", urlMedia)
-                            intent.putExtra("subUrl",sub[0].subtitlingUrl)
-                            ContextCompat.startActivity(this@DetailActivity, intent, null)
+
+
+
                         } catch (e: Exception) {
 
                             dialog.dismiss()
                             Toast.makeText(
                                 this@DetailActivity,
-                                "Film đang được vui lòng gửi thử lại...",
+                                "Film đang được vui lòng gửi thử lại... ${e.toString()}}",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
