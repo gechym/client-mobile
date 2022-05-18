@@ -84,7 +84,6 @@ class LoginFragment : Fragment() {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful) {
 
-//                it.result.user.
 
                 Toast.makeText(requireContext(), "Login successfully", Toast.LENGTH_SHORT).show()
                 activity?.finish()

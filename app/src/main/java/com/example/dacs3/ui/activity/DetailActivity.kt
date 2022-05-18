@@ -82,7 +82,7 @@ class DetailActivity : YouTubeBaseActivity() {
         id = intent.getIntExtra("id", 12228)
         category = intent.getIntExtra("category", 1)
 
-        Toast.makeText(this, "$id $category", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "$id $category", Toast.LENGTH_SHORT).show()
 
         val scopeMain = CoroutineScope(Dispatchers.Main)
         scopeMain.launch {
@@ -234,8 +234,10 @@ class DetailActivity : YouTubeBaseActivity() {
                                 intent.putExtra("urlMedia", urlMedia)
                                 intent.putExtra("subUrl",sub[0].subtitlingUrl)
                                 ContextCompat.startActivity(this@DetailActivity, intent, null)
+
                             }catch (e:Exception){
                                 dialog.dismiss()
+
                                 val intent = Intent(this@DetailActivity, HlsActivity::class.java)
                                 intent.putExtra("urlMedia", urlMedia)
                                 ContextCompat.startActivity(this@DetailActivity, intent, null)
@@ -300,8 +302,7 @@ class DetailActivity : YouTubeBaseActivity() {
             binding.recyclerviewEpisode.visibility = View.VISIBLE
             binding.textViewRecomment.visibility = View.VISIBLE
             binding.recyclerviewRecomment.visibility = View.VISIBLE
-
-
+            binding.btnBack.visibility = View.VISIBLE
             binding.animationView.visibility = View.GONE
 
             setInit()
@@ -314,6 +315,7 @@ class DetailActivity : YouTubeBaseActivity() {
             binding.recyclerviewEpisode.visibility = View.GONE
             binding.textViewRecomment.visibility = View.GONE
             binding.recyclerviewRecomment.visibility = View.GONE
+            binding.btnBack.visibility = View.GONE
         }
     }
 

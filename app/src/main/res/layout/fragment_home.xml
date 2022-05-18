@@ -50,8 +50,6 @@
 
 
 
-
-
     <LinearLayout
         android:background="@drawable/gradient_nav_bar"
         android:id="@+id/navBar"

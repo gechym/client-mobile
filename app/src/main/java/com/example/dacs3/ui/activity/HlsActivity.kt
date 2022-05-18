@@ -7,7 +7,6 @@ import android.graphics.drawable.ColorDrawable
 import android.media.AudioManager
 import android.media.audiofx.LoudnessEnhancer
 import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -19,9 +18,6 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.GestureDetectorCompat
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.dacs3.R
@@ -115,17 +111,17 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
 
         setContentView(binding.root)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            window.attributes.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS
-        }
-
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        WindowInsetsControllerCompat(window,binding.root).let { controller ->
-            controller.hide(WindowInsetsCompat.Type.statusBars())
-            controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        }
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+//            window.attributes.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS
+//        }
+//
+//        WindowCompat.setDecorFitsSystemWindows(window, false)
+//        WindowInsetsControllerCompat(window,binding.root).let { controller ->
+//            controller.hide(WindowInsetsCompat.Type.statusBars())
+//            controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+//        }
+//
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
         urlMedia = intent.getStringExtra("urlMedia").toString()
@@ -147,34 +143,19 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
 
     // TODO KHỞI TẠO TRÌNH PLAYER BAN ĐẦU
     private fun initPlayer(){
-
-
         gestureDetectorCompat = GestureDetectorCompat(this, this, )
-
-
         trackSelector = DefaultTrackSelector(this)//TODO AUDIO TRACK
-
-
-
         simpleExoPlayer = SimpleExoPlayer.Builder(this)
             .setTrackSelector(trackSelector) //TODO AUDIO TRACK
             .build() // Khởi tạo trình phát
-
-
         // Quản lý âm thanh
         audioManager = getSystemService(AUDIO_SERVICE) as AudioManager
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume,0)
-
-
-
         simpleExoPlayer.addListener(playerlistener) // Lắng nghe
         exoPlayerView.player = simpleExoPlayer // gắng trình phát vào videoView
         binding.youtubeOverlay.player(simpleExoPlayer) // gắng API duable tap
 
-
         seekBarFeature()
-
-
 
         //TODO tạo nguồn truyền thông
         createMediaSource()
@@ -189,8 +170,6 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
 
         //DEFAULT SPEED
         speed = 1f
-
-
 
         initializeBinding()
         setVisibility()
@@ -218,8 +197,6 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
                 binding.youtubeOverlay.visibility = View.VISIBLE
             }
         })
-
-
 
         //TODO nút quay lại
         binding.backBtn.setOnClickListener {
@@ -613,7 +590,6 @@ class HlsActivity : AppCompatActivity() , GestureDetector.OnGestureListener  {
                         or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         or View.SYSTEM_UI_FLAG_FULLSCREEN
                 )
-
     }
     private fun showSystemUi(){
         actionBar?.show()

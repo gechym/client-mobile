@@ -1,6 +1,5 @@
 package com.example.dacs3.ui.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -28,6 +27,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
     lateinit var bindingLoadingBinding: MangHinhLoadingBinding
     lateinit var mAuth: FirebaseAuth
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         mAuth = FirebaseAuth.getInstance()
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        supportActionBar?.hide();
 
 
     }

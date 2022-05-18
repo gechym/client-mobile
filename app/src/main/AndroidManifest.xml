@@ -34,7 +34,7 @@
             android:configChanges="orientation|keyboard|layoutDirection|screenSize"
             android:exported="false"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.Player"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -44,6 +44,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activity.MainActivity"
+            android:theme="@style/Theme.DACS3"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -60,10 +61,7 @@ See README(https://goo.gl/l4GJaQ) for more.
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/logo" />
-        <!--
- Set color used with incoming notification messages. This is used when no color is set for the incoming
-             notification message. See README(https://goo.gl/6BKBk7) for more.
-        -->
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/redNetflix" />
